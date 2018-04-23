@@ -1,0 +1,101 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+/*#row1{
+	margin-left: 100px;
+}*/
+#row1 li{
+	margin-left: 50px;
+	list-style: none;
+	float: left;
+}
+h1{
+	padding-top: 30px;
+	color: #136572;
+}
+.logo{
+	margin-left: 50px;
+}
+.clear_float{
+	clear: both;
+}
+.main_row2{
+	margin-left: 50px;
+}
+#row1 a{
+	text-decoration: none;
+	color: black;
+}
+#row2{
+	background-color: #f8f6f6;
+}
+.box{
+	margin-top: 30px;
+	margin-right: 30px;
+	position: relative;
+	width: 30%;
+	float: left;
+}
+.img{
+	max-width: 100%;
+}
+.icon{
+	position: absolute;
+	right: 0;
+}
+.box>span{
+	text-decoration: bold;
+	color: #136572;
+}
+#row3{
+	padding-top: 30px;
+}
+#col1{
+	float: left;
+	width: 50%;
+	padding-left: 50px;
+}
+#col2{
+	width: 30%;
+	float: left;
+	padding-left: 50px;
+}
+#row4{
+	background-color: #89b2b8;
+	margin-top: 20px;
+}
+#row4 div{
+	margin-left: 50px;
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+.text{
+	width: 700px;
+}
+.text1{
+	width: 700px;
+	height: 100px;
+}
+.text2{
+	color: white;
+	padding-bottom: 5px;
+}
+@media (max-width: 700px){
+	.box{
+		margin-top: 30px;
+		margin-right: 30px;
+		position: relative;
+		width: 40%;
+		float: left;
+	}
+}
+@media (max-width: 480px){
+	.box{
+		margin-top: 30px;
+		margin-right: 30px;
+		position: relative;
+		width: 100%;
+		float: left;
+	}
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> -->
+	<style>
+		.div1{
+			background-color: red;
+			float: left;
+			width: 50%;
+			height: 200px;
+		}
+		.div2{
+			background: green;
+			float: left;
+			width: 50%;
+			height: 200px;
+		}
+
+			@media(min-with:500px) and (max-width:768px){
+				.div1, .div2{
+					width: 100%;
+				}
+			}
+
+			@media(min-width: 300px){
+				.div1, .div2{
+					width: 100%;
+				}
+			}
+			nav{
+				background-color: blue;
+				height: 42px;
+				width: 100%;
+			}
+			ul{
+				margin-left: none;
+			}
+			ul li{
+				list-style: none;
+				float: left;
+				margin-left: 50px;
+				line-height: 42px;
+			}
+			ul li a {
+				text-decoration: none;
+				color: green;
+			}
+			ul li:first-child{
+				display: none;
+			}
+			@media (max-width: 608px){
+				ul li:first-child{
+				display: block;
+			}
+				.menu{
+					display: none;
+				}
+			ul li:first-child:hover .menu{
+				float: none;
+				display: block;
+			}
+			}
+
+			.box{
+				width: 33%;
+				float: left;
+			}
+			@media(max-width: 327px){
+				.box{
+					width: 100%;
+				}
+			}
+			@media(max-width: 800px){
+				.box{
+					width: 50%;
+				}
+			}
+
+			@font-face {
+				font-family: 'Zed';
+				src: url('fonts/ITCBLKAD.TTF')
+			}
+
+	</style>
+</head>
+<body>
+	<!-- <video controls loop="false" autoplay src="videos/1.mp4"></video>
+	<audio controls src="audio/1.mp4"></audio>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/HsMFcQlxwKs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	<iframe scrolling="no" width="640" height="180" src="https://mp3.zing.vn/embed/song/ZW9BID0A?start=false" frameborder="0" allowfullscreen="true"></iframe> -->
+
+<!-- 	<div class="div1"></div>
+	<div class="div2">	
+	</div> -->
+
+
+<!-- 	<nav>
+		<ul>
+			<li><i class="fa fa-bars" aria-hidden="true"></i></li>
+			<li class="menu"><a href="">Home</a></li>
+			<li class="menu"><a href="">About</a></li>
+			<li class="menu"><a href="">Course</a></li>
+			<li class="menu"><a href="">News</a></li>
+			<li class="menu"><a href="">Contact</a></li>
+			<li class="menu"><a href="">Pages</a></li>
+		</ul>
+		<img style="display: block; max-width: 100%" src="" alt="">
+	</nav> -->
+		<div class="box"><img style="display: block; max-width: 100%" src="images/ip.jpg" alt="ip."></div>
+		<div class="box"><img style="display: block; max-width: 100%" src="images/ip.jpg" alt=""></div>
+		<div class="box"><img style="display: block; max-width: 100%" src="images/ip.jpg" alt=""></div>
+		<div class="box"><img style="display: block; max-width: 100%" src="images/ip.jpg" alt=""></div>
+		<div class="box"><img style="display: block; max-width: 100%" src="images/ip.jpg" alt=""></div>
+		<div class="box"><img style="display: block; max-width: 100%" src="images/ip.jpg" alt=""></div>
+		<div class="box"><img style="display: block; max-width: 100%" src="images/ip.jpg" alt=""></div>
+		<div class="box"><img style="display: block; max-width: 100%" src="images/ip.jpg" alt=""></div>
+		<div class="box"><img style="display: block; max-width: 100%" src="images/ip.jpg" alt=""></div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#menu{
+			margin-left: 500px;
+		}
+		#menu div{
+			border: black 1px solid;
+			width: 200px;
+			padding: 10px;
+			background-color: #9999ff;
+		}
+		#submit{
+			margin-left: 500px;
+		}
+		#submit a{
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<div id="menu">
+			<div onmouseover="over(this)" onmouseout="out(this)">
+					<input type="checkbox" class="myCheck">
+					<span>Lorem ipsum dolor sit amet.</span>
+			</div>
+			<div onmouseover="over(this)" onmouseout="out(this)">
+				<input type="checkbox" class="myCheck">
+				<span>Lorem ipsum dolor sit amet.</span>
+			</div>
+			<div onmouseover="over(this)" onmouseout="out(this)">
+				<input type="checkbox" class="myCheck">
+				<span>Lorem ipsum dolor sit amet.</span>
+			</div>
+			<div onmouseover="over(this)" onmouseout="out(this)">
+				<input type="checkbox" class="myCheck">
+				<span>Lorem ipsum dolor sit amet.</span>
+			</div>
+			<div onmouseover="over(this)" onmouseout="out(this)">
+				<input type="checkbox" class="myCheck">
+				<span>Lorem ipsum dolor sit amet.</span>
+			</div>
+			<div onmouseover="over(this)" onmouseout="out(this)">
+				<input type="checkbox" class="myCheck">
+				<span>Lorem ipsum dolor sit amet.</span>
+			</div>
+		</div>
+		<br>
+		<div id="submit">
+			<a href="#" onfocus="check()">Check</a>
+			<a href="#" onfocus="uncheck()">UnCheck</a>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function check() {
+    		document.getElementsByClassName("myCheck")[0].checked = true;
+    		document.getElementsByClassName("myCheck")[1].checked = true;
+    		document.getElementsByClassName("myCheck")[2].checked = true;
+    		document.getElementsByClassName("myCheck")[3].checked = true;
+    		document.getElementsByClassName("myCheck")[4].checked = true;
+    		document.getElementsByClassName("myCheck")[5].checked = true;
+	}
+		function uncheck() {
+    		document.getElementsByClassName("myCheck")[0].checked = false;
+    		document.getElementsByClassName("myCheck")[1].checked = false;
+    		document.getElementsByClassName("myCheck")[2].checked = false;
+    		document.getElementsByClassName("myCheck")[3].checked = false;
+    		document.getElementsByClassName("myCheck")[4].checked = false;
+    		document.getElementsByClassName("myCheck")[5].checked = false;
+	}
+		function over(a){
+			a.style.backgroundColor ="green";
+		}
+		function out(a){
+			a.style.backgroundColor ="#9999ff";
+		}
+	</script>
+</body>
+</html>

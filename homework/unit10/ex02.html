@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+	<style>
+		#main{
+			position: relative;
+			width: 800px;
+			height: 400px;
+		}
+		#pic1{
+			position: absolute;
+			z-index: 1;
+		}
+		#pic2{
+			position: absolute;
+			display: none;
+		}
+		#pic3{
+			position: absolute;
+			display: none;
+		}
+		#pic4{
+			position: absolute;
+			display: none;
+		}
+		#pic5{
+			position: absolute;
+			display: none;
+		}
+		#pic6{
+			position: absolute;
+			display: none;
+		}
+		#left{
+			position: absolute;
+			z-index: 2;
+			top:150px;
+			left: 30px;
+		}
+		#right{
+			position: absolute;
+			z-index: 2;
+			left: 700px;
+			top: 150px;
+		}
+		.but{
+			width: 20px;
+			height: 20px;
+			background-color: white;
+		}
+		.but button{
+			margin-right: 10px;
+		}
+
+		#box{
+			position: absolute;		
+			z-index: 2;
+			top:350px;
+			left:600px;
+		}
+	</style>
+<body>
+	<div id="main">
+		<button id="left" onclick="left()">LEFT</button>
+		<button id="right" onclick="right()">RIGHT</button>
+		<div id="box">
+			<button class="but" id="but1" onclick="click1()"></button>
+			<button class="but" id="but2" onclick="click2()"></button>
+			<button class="but" id="but3" onclick="click3()"></button>
+			<button class="but" id="but4" onclick="click4()"></button>
+			<button class="but" id="but5" onclick="click5()"></button>
+			<button class="but" id="but6" onclick="click6()"></button>
+		</div>
+		<div> 
+			<img src="images/hoa1.png" alt="" width="800px" height="400px" id="pic1">
+		</div>
+		<div>
+			<img src="images/hoa2.png" alt="" width="800px" height="400px" id="pic2">
+		</div>
+		<div>
+			<img src="images/hoa3.png" alt="" width="800px" height="400px" id="pic3">
+		</div>
+		<div>
+			<img src="images/hoa4.png" alt="" width="800px" height="400px" id="pic4">
+		</div>
+		<div>
+			<img src="images/hoa5.png" alt="" width="800px" height="400px" id="pic5">
+		</div>
+		<div>
+			<img src="images/hoa6.png" alt="" width="800px" height="400px" id="pic6">
+		</div>
+	</div>
+	<div id="hihi"></div>
+</body>
+<script type="text/javascript">
+	function left(){
+			var a = document.getElementsByClassName('but')[2];
+	}
+	function click1(){
+		document.getElementById('pic1').style.zIndex="0";
+		document.getElementById('pic1').style.display="block";
+		document.getElementById('pic2').style.display="none";
+		document.getElementById('pic3').style.display="none";
+		document.getElementById('pic4').style.display="none";
+		document.getElementById('pic5').style.display="none";
+		document.getElementById('pic6').style.display="none";
+		document.getElementById('but1').style.backgroundColor="gray";
+		document.getElementById('but2').style.backgroundColor="white";
+		document.getElementById('but3').style.backgroundColor="white";
+		document.getElementById('but4').style.backgroundColor="white";
+		document.getElementById('but5').style.backgroundColor="white";
+		document.getElementById('but6').style.backgroundColor="white";
+	}
+	function click2(){
+		document.getElementById('pic2').style.zIndex="0";
+		document.getElementById('pic2').style.display="block";
+		document.getElementById('pic1').style.display="none";
+		document.getElementById('pic3').style.display="none";
+		document.getElementById('pic4').style.display="none";
+		document.getElementById('pic5').style.display="none";
+		document.getElementById('pic6').style.display="none";
+		document.getElementById('but2').style.backgroundColor="gray";
+		document.getElementById('but1').style.backgroundColor="white";
+		document.getElementById('but3').style.backgroundColor="white";
+		document.getElementById('but4').style.backgroundColor="white";
+		document.getElementById('but5').style.backgroundColor="white";
+		document.getElementById('but6').style.backgroundColor="white";
+
+	}
+	function click3(){
+		document.getElementById('pic3').style.zIndex="0";
+		document.getElementById('pic3').style.display="block";
+		document.getElementById('pic2').style.display="none";
+		document.getElementById('pic1').style.display="none";
+		document.getElementById('pic4').style.display="none";
+		document.getElementById('pic5').style.display="none";
+		document.getElementById('pic6').style.display="none";
+		document.getElementById('but3').style.backgroundColor="gray";
+		document.getElementById('but2').style.backgroundColor="white";
+		document.getElementById('but1').style.backgroundColor="white";
+		document.getElementById('but4').style.backgroundColor="white";
+		document.getElementById('but5').style.backgroundColor="white";
+		document.getElementById('but6').style.backgroundColor="white";
+	}
+	function click4(){
+		document.getElementById('pic4').style.zIndex="0";
+		document.getElementById('pic4').style.display="block";
+		document.getElementById('pic2').style.display="none";
+		document.getElementById('pic3').style.display="none"
+		document.getElementById('pic1').style.display="none";
+		document.getElementById('pic5').style.display="none";
+		document.getElementById('pic6').style.display="none";
+		document.getElementById('but4').style.backgroundColor="gray";
+		document.getElementById('but2').style.backgroundColor="white";
+		document.getElementById('but3').style.backgroundColor="white";
+		document.getElementById('but1').style.backgroundColor="white";
+		document.getElementById('but5').style.backgroundColor="white";
+		document.getElementById('but6').style.backgroundColor="white";
+	}
+	function click5(){
+		document.getElementById('pic5').style.zIndex="0";
+		document.getElementById('pic5').style.display="block";
+		document.getElementById('pic2').style.display="none";
+		document.getElementById('pic3').style.display="none";
+		document.getElementById('pic4').style.display="none";
+		document.getElementById('pic1').style.display="none";
+		document.getElementById('pic6').style.display="none";
+		document.getElementById('but5').style.backgroundColor="gray";
+		document.getElementById('but2').style.backgroundColor="white";
+		document.getElementById('but3').style.backgroundColor="white";
+		document.getElementById('but4').style.backgroundColor="white";
+		document.getElementById('but1').style.backgroundColor="white";
+		document.getElementById('but6').style.backgroundColor="white";
+	}
+	function click6(){
+		document.getElementById('pic6').style.zIndex="0";
+		document.getElementById('pic6').style.display="block";
+		document.getElementById('pic2').style.display="none";
+		document.getElementById('pic3').style.display="none";
+		document.getElementById('pic4').style.display="none";
+		document.getElementById('pic5').style.display="none";
+		document.getElementById('pic6').style.display="none";
+		document.getElementById('but6').style.backgroundColor="gray";
+		document.getElementById('but2').style.backgroundColor="white";
+		document.getElementById('but3').style.backgroundColor="white";
+		document.getElementById('but4').style.backgroundColor="white";
+		document.getElementById('but5').style.backgroundColor="white";
+		document.getElementById('but1').style.backgroundColor="white";
+	}
+</script>
+</html>

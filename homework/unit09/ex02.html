@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.sub{
+			float: left;
+			margin-right: 20px;
+		}
+		#menu{
+			width: 300px;
+			border: black 1px solid;
+			height: 100px;
+		}
+		#text{
+			width: 600px;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<div id="menu">
+			<p>Cỡ chữ</p>
+			<button onclick="defau()" class="sub">Mặc Định</button>
+			<button onclick="big()" class="sub">Lớn</button>
+			<button onclick="small()" class="sub">Nhỏ</button>
+		</div>
+
+		<div style=""></div>
+
+		<div id="text">
+			<p id="lorem">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dignissimos nobis provident facere minima, perferendis. Recusandae pariatur commodi accusantium. Optio.
+			</p>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function defau(){
+			document.getElementById("lorem").style.fontSize="100%";
+		}
+		function big(){
+			document.getElementById("lorem").style.fontSize = "140%";
+		}
+		function small(){
+			document.getElementById("lorem").style.fontSize = "40%";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			position: relative;
+		/*	border-radius: 100px;*/
+			background: green;
+			animation: huy;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			animation-direction: reverse; 
+			
+
+			transform: rotate(30deg);
+			background: linear-gradient(green,red);
+		}
+		@keyframes huy{
+			0%{
+				top: 0;
+				left: 0;
+			}
+			15%{
+				top: 0;
+				left: 400px;
+			}
+			30%{
+				top: 400px;
+				left: 0;
+			}
+			45%{
+				top: 0;
+				left: 0;
+			}
+			60%{
+				top: 0;
+				left: 400px;
+			}
+			75%{
+				top: 400px;
+				left: 400px;
+			}
+			85%{
+				top: 400px;
+				left: 0;
+			}
+			100%{
+				top: 0;
+				left: 0;
+			}
+			/*from{
+				background: green;
+			}
+			to{
+				background: red;
+			}*/
+		}
+
+	</style>
+</head>
+<body>
+	<div></div>
+	<marquee loop="infinite" direction="down" width="600px" height="400px">
+		<p>Lorem ipsum dolor sit amet.</p>
+		<p>Lorem ipsum dolor sit amet.</p>
+		<p>Lorem ipsum dolor sit amet.</p>
+	</marquee>
+</body>
+</html>

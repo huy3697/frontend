@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	#content{
+		position: relative;
+		width: 200px;
+		height: 200px;
+		background: green;
+	}
+	#child{
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		background: red;
+	}
+</style>
+<body>
+	<div>
+		<p>Lorem ipsum dolor sit amet.</p>
+		<h3>Lorem ipsum dolor sit amet.</h3>
+		<input type="text" value="haha">
+		<select onchange="xxx()" id="select">
+			<option value="1">Ha Noi</option>
+			<option value="2">TP Ho Chi Minh</option>
+		</select>
+		<br>
+		<button id="click" conte="123">Add</button>
+		<div id="content">
+			<div id="child">
+				
+			</div>
+		</div>
+
+		<input type="text" name="" id="input">
+		<button id="add">Add</button>
+		<button id="checkall">CheckAll</button>
+		<button id="del">Delete</button>
+		<div class="div"></div>
+
+	</div>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		// $('h3').html('<div>ahihi</div>').css('color','red')
+		// $('h3').siblings().css('color','green')
+		// $('h3').text('kaka')
+		// $('input').val('hehe')
+		// $('select').val('2');
+
+		function xxx(){
+			var select = $('select').val();
+			$('#content').append('<p>'+select+'</p>');
+		}
+
+		$('#click').click(function(){
+			$('#content').prepend('<div><button class="del">Xoa</button></div>')
+		})
+
+		$('body').on('click','.del',function(){
+			$(this).parent().remove();
+		})
+
+		$('#content').click(function(){
+			alert('parent')
+		})
+		$('#child').click(function(e){
+			e.stopPropagation();
+			alert('child')
+		})
+
+		$('#add').click(function(){
+			var input = $('#input').val();
+			var a = "<div><input type='checkbox' class='check'>"+input+"<button class='edit' content="+input+">Edit</button><button class='del'>Del</button></div>";
+			$('.div').prepend(a);
+			$('#input').val('');
+		})
+
+		$('body').on('click','#checkall',function(){
+			$("input[type='checkbox']").each(function(index){
+				$(this).prop('checked',true);
+			})
+		})
+
+		// $('#checkall').click(function(){
+		// 	var a = document.getElementsByClass('check');
+		// 	for(var i=0;i<a.length;i++){
+		// 		$(i).checked=true;
+		// 	}
+		// })
+
+		$('body').on('click','#del',function(){
+			$("input[type='checkbox']").each(function(index, value){
+				console.log(index);
+				console.log(value);
+				if($(this).is(':checked')){
+					$(this).parent().remove();
+				}
+			})
+		})
+	</script>
+</body>
+</html>

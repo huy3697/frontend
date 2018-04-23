@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="hien()">Click</button>
+	<div id="text"></div>
+	<script>
+		function hien(){
+			var so ="";
+			for(var i =2;i<=9;i++){
+				for(var j=1;j<=9;j++){
+					so+=i+"X"+j+"="+(i*j)+"-----";
+				}
+			}
+			document.getElementById("text").innerHTML=so;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>
+				<span id="span">1</span>
+				<span>2</span>
+			</li>
+
+			<li>
+				<b>Ahihi</b>
+			</li>
+		</ul>
+
+		<h3>Ahihi</h3>
+	</div>
+	<input type="text" name="" id="input">
+	<button>Add</button>
+	<div id="content"></div>
+	<div data-name="Huy" data-age="18" abc="hehe">Click</div>
+
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#span').click(function(){
+				$(this).parents('ul').next().css('color', 'red');
+			})
+		})
+
+		$(function(){
+			$('#div').click(function(){
+				var abc = $(this).attr('abc');
+				var name = $(this).data('name');
+				alert(name);
+			})
+		})
+
+		$(function(){
+			$('button').click(function(){
+				var abc = $(this).attr('abc');
+				var name = $(this).data('name');
+				alert(name);
+			})
+		})
+	</script>
+</body>
+</html>

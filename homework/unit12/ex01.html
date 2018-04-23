@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#content {
+		position: relative;
+		width: 100%;
+		height: 50px;
+		background: #5294d6;
+	}
+	#content h3{
+		color: white;
+		line-height: 50px;
+		float: left;
+		margin-left: 20px;
+	}
+	#content ul{
+		position: absolute;
+		right: 10px;
+	}
+	#content ul li{
+		list-style: none;
+		float: left;
+		margin-right: 20px;
+	}
+	#content ul li a{
+		text-decoration: none;
+		color: white;
+		line-height: 50px;
+	}
+	#menu {
+		width: 30%;
+		background: #C0D6E4;
+		float: left;
+	}
+	#name {
+		width: 70%;
+		float: left;
+	}
+	.select {
+		background: #C0D6E4;
+		float: left;
+		margin-left: 10px;
+		width: 20%;
+		height: 30px;
+		line-height: 30px;
+	}
+	#form {
+		width: 100%;
+		height: 300px;
+	}
+	#form2{
+		display: none;
+	}
+	#form3 {
+		display: none;
+	}
+	#warning1, #check, #warning2{
+		display: none;
+	}
+	#form4{
+		display: none;
+	}
+</style>
+<body>
+	<div>
+		<div id="content">
+			<h3>jQuery Steps</h3>
+			<ul>
+				<li><a href="#">Getting Started</a></li>
+				<li><a href="#">Example</a></li>
+				<li><a href="#">Documentation</a></li>
+				<li><a href="#">Bootgrid</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Github</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</div>
+		<center>
+				<h1>Advanced Form Example</h1>
+		</center>
+		<div id="main">		
+			<div id="menu">
+				<ul>
+					<li><a href="#">Basic Example</a></li>
+					<li><a href="#">Basic Form Example</a></li>
+					<li><a href="#">Advanced Form Example</a></li>
+					<li><a href="#">Bacsic Example</a></li>
+					<li><a href="#">Bacsic Example</a></li>
+					<li><a href="#">Bacsic Example</a></li>
+					<li><a href="#">Bacsic Example</a></li>
+					<li><a href="#">Bacsic Example</a></li>
+				</ul>
+			</div>
+			<div id="name">
+				<div class="select">1.Account</div>
+				<div class="select">2.Profile</div>
+				<div class="select">3.Warning</div>
+				<div class="select">4.Finish</div>
+
+				<div style="clear: both;"></div>
+			<div id="form">
+				<div id="form1">
+					<h3>Account Information</h3>
+					<div>
+						<span>User Name*</span>
+						<span id="erruser"></span>
+					</div>
+					<input type="text" name="" id="user">
+					<div>
+						<span>Password*</span>
+						<span id="errpass"></span>
+					</div>
+					<input type="text" name="" id="pass">
+					<div>
+						<span>Confirm Password*</span>
+						<span id="errcpass"></span>
+					</div>
+					<input type="text" name="" id="cpass">
+					<p>(*) Mandatory</p>
+				</div>
+
+				<div id="form2">
+					<h3>Profile Information</h3>
+					<div>
+						<span>First Name*</span>
+						<span id="errfname"></span>
+					</div>
+					<input type="text" name="" id="firstname">
+					<div>
+						<span>Last Name*</span>
+						<span id="errlname"></span>
+					</div>
+					<input type="text" name="" id="lastname">
+					<div>
+						<span>Email*</span>
+						<span id="erremail"></span>
+					</div>
+					<input type="text" name="" id="email">
+					<div>
+						Address
+					</div>
+					<input type="text" name="" id="address">
+					<div>
+						<span>Age(The warning step will show up if age is less than 18)*</span>
+						<span id="errage"></span>
+					</div>
+					<input type="text" name="" id="age">
+					<p>(*) Mandatory</p>
+				</div>
+
+				<div id="form3">
+					<div id="warning1">Bạn chưa đủ 18 mời quay lại !</div>
+					<input type="checkbox" name="" id="check">
+					<span id="warning2">Tích nếu bạn đủ 18</span>
+				</div>
+
+				<div id="form4">
+					<h1>SUCCESSFULL</h1>
+				</div>
+
+			</div>
+
+				<button id="pre">Previous</button>
+				<button id="next">Next</button>
+			</div>
+		</div>
+	</div>
+</body>
+
+	<script type="text/javascript" src="../../js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#user').keyup(function(){
+				$('#erruser').text('')
+			})
+			$('#pass').keyup(function(){
+				$('#errpass').text('')
+			})
+			$('#cpass').keyup(function(){
+				$('#errcpass').text('')
+			})
+		})
+
+		$(function(){
+			$('#firstname').keyup(function(){
+				$('#errfname').text('')
+			})
+			$('#lastname').keyup(function(){
+				$('#errlname').text('')
+			})
+			$('#email').keyup(function(){
+				var email = $('#email').val();
+			if (validateEmail(email)) {
+				$('#erremail').text('')
+			}
+			else{
+				$('#erremail').text('Không đúng định dạng Email')
+			}
+			})
+
+			$('#age').keyup(function(){
+				$('#errage').text('')
+			})
+		})
+
+		function validateEmail(email) {
+			var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			return re.test(String(email).toLowerCase());
+		}
+
+		$(function(){
+			$('#next').click(function(){
+			if($('#form1').is(":hidden") == false){
+
+				var user = $('#user').val();
+				var pass = $('#pass').val();
+				var cpass = $('#cpass').val();
+				if(user==""){
+					$('#erruser').text('This field is required.')
+				}
+				if(pass==""){
+					$('#errpass').text('This field is required.')
+				}
+				if(cpass==""){
+					$('#errcpass').text('This field is required.')
+				}
+				if(pass!=cpass){
+					$('#errcpass').text('This field is required.')
+				}
+				if(user!="" && pass!="" && cpass!="" && pass==cpass){
+					$('#form2').css('display','block');
+					$('#form1').css('display','none');
+					$('#form3').css('display','none');
+					$('#form4').css('display','none');
+				}
+			}
+
+			if($('#form2').is(":hidden") == false){
+				var fname = $('#firstname').val();
+				var lname = $('#lastname').val();
+				var email = $('#email').val();
+				var address = $('#address').val();
+				var age = $('#age').val();
+				if(fname==""){
+					$('#errfname').text('This field is required.')
+				}
+				if(lname==""){
+					$('#errlname').text('This field is required.')
+				}
+				if(email==""){
+					$('#erremail').text('This field is required.')
+				}
+				if(age==""){
+					$('#errage').text('This field is required.')
+				}
+				if(fname!="" && lname!="" && email!="" && age!=""){
+					$('#form3').css('display','block');
+					$('#form1').css('display','none');
+					$('#form2').css('display','none');
+					$('#form4').css('display','none');
+				}
+			}
+
+			if($('#form3').is(":hidden") == false){
+				var age = $('#age').val();
+				if(age<18){
+					$('#warning1').css('display','block')
+				}else if(age>=18){
+					$('#check').css('display','block')
+					$('#warning2').css('display','block')
+					$('#warning1').css('display','none')
+					if($('#check').prop("checked") == true){
+						$('#form4').css('display','block');
+						$('#form1').css('display','none');
+						$('#form2').css('display','none');
+						$('#form3').css('display','none');
+						alert("Đăng kí thành công");
+			}
+				}else{
+					$('#errage').text('This field is required.')
+				}
+			}
+
+			})
+		})
+	$(function(){
+		$('#pre').click(function(){
+			if($('#form4').is(":hidden") ==false){
+				$('#form3').css('display','block');
+				$('#form1').css('display','none');
+				$('#form2').css('display','none');
+				$('#form4').css('display','none');
+			}else if($('#form3').is(":hidden") ==false){
+				$('#form2').css('display','block');
+				$('#form1').css('display','none');
+				$('#form4').css('display','none');
+				$('#form3').css('display','none');
+			}else if($('#form2').is(":hidden") ==false){
+				$('#form1').css('display','block');
+				$('#form2').css('display','none');
+				$('#form3').css('display','none');
+				$('#form4').css('display','none');
+			}
+		
+		})
+	})
+		
+	</script>
+</html>

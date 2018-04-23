@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" method="post" onsubmit="validateEmail()">
+		<input type="text" id="email" onkeyup="checkemail(this)">
+		<p id="errorEmail"></p>
+		<input type="text" id="password" >
+		<input type="submit" name="" disabled="" value="Submit">
+	</form>
+	<script>
+		function validateEmail(email) {
+    		var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+   		return re.test(String(email).toLowerCase());
+	}
+
+	function checkemail(a){
+		var a = Document.getElementById("email").value;
+		if (validateEmail(email)) {
+			document.getElementById('errorEmail').innerHTML='';
+		}else{
+			document.getElementById('errorEmail').innerHTML='Moi nhap dung Email';
+		}
+	}
+	</script>
+</body>
+</html>

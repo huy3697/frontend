@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="input" onkeyup="checkValidate()"><button id="add" onclick="add()" disabled="">Add</button>
+	<button onclick="Check(true)">Check</button><button onclick="Check(false)">UnCheck</button>
+	<button onclick="Xoa()">Delete</button>
+	<table>
+		<tbody id="content">		
+		</tbody>
+	</table>
+	<script type="text/javascript">
+		var i=1;
+		function checkValidate(){
+
+			var input = document.getElementById('input');
+
+			if(input.value!=''){
+				document.getElementById('add').disabled=false;
+			}else{
+				document.getElementById('add').disabled=true;
+			}
+		}
+		function add(){
+
+		var input = document.getElementById('input');
+
+		var tr = '<tr id="'+i+'"><td><input type="checkbox" value="'+i+'" class="check"></td><td>'+input.value+'</td><td><button>Show</button><button>Edit</button><button onclick="del('+i+')">Delete</button></td></tr>';
+		var content = document.getElementById('content');
+		content.innerHTML = tr + content.innerHTML;
+		input.value='';
+		document.getElementById('add').disabled=true;
+		i++;
+	}
+		function del(i){
+			document.getElementById(i).remove();
+		}
+		function Check(a){
+			var check = document.getElementsByClassName('check');
+			for (var i = 0; i < check.length; i++) {
+				check[i].checked =a;
+			}
+		}
+		function Xoa(){
+			var check = document.getElementsByClassName('check');
+			for (var k = check.length - 1; k >= 0; k--) {
+				if(check[k].checked==true){
+					document.getElementById(check[k].value).remove();
+			}
+			}
+		}
+	</script>
+</body>
+</html>

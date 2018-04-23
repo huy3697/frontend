@@ -1,0 +1,11 @@
+#body{
+	position: relative;
+}
+#slide{
+	position: absolute;
+	z-index: 1;
+}
+#contact{
+	position: absolute;
+	z-index: 2;
+}

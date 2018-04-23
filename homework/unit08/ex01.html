@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="tinhtoan()">
+		Click
+	</button>
+	<div id="text"></div>
+
+
+	<script type="text/javascript">
+		function tinhtoan() {
+			var text="";
+			for (var i=0; i <= 100; i++) {
+				if(((i%3)==0) || ((i%7)==0)){
+					text+=i + " ";
+				}
+			}	
+			document.getElementById('text').innerHTML = text;
+		}
+		</script>
+	</body>
+	</html>

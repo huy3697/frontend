@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="container"></div>
+	<input type="text" id="input">
+	<button onclick="clickme()">Add</button>
+	<script>
+		// function clickme(){
+		// 	if(confirm('Do you want to google ?')){
+		// 		window.open("https://www.google.com.vn/");
+		// 	}
+		// }
+		function clickme(){
+			var a = document.getElementById('input');
+			var b = document.getElementById('container');
+			b.innerHTML ='<p>' + a.value + '</p>' + b.innerHTML;
+			a.value ='';
+		}
+	</script>
+</body>
+</html>

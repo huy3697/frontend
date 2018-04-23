@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+#main{
+	position: relative;
+}
+#div1 img{
+	position: absolute;
+	width: 500px;
+	height: 300px;
+	z-index: 2;
+}
+#button{
+	position: absolute;
+	z-index: 2;
+	top: 300px;
+	left: 150px;
+}
+#div2 {
+	position: absolute;
+	display: none;
+	z-index: 3;
+	width: 100%;
+}
+#div2 img{
+	width: 800px;
+	height: 600px;
+}
+#content{
+	width: 800px;
+	text-align: center;
+	background: white;
+}
+#close{
+	position: absolute;
+	display: none;
+	top: 30px;
+	right: 200px;
+	z-index: 4;
+}
+</style>
+<body>
+	<div id="main">
+		<div id="div1">
+			<img src="zed.jpg" alt="Championship Zed" id="zed">
+			<br>
+			<button id="button">Show</button>
+		</div>
+		<div id="div2">
+			<center>
+				<img src="" alt="" id="img">
+				<p id="content"></p>
+				<i class="fa fa-times" aria-hidden="true" id="close"></i>
+			</center>
+		</div>
+	</div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#button').click(function(){
+			var pic = $('#zed').attr('src');
+			$('#div2').css({'display':'block'});
+			$('#img').attr('src',pic);
+			$('#content').html('#zed'.alt);
+			$('#close').css({'display':'block'});
+		})
+	})
+
+	$(function(){
+		$('#close').click(function(){
+			$('#div2').css({'display':'none'});
+		})
+	})
+</script>
+</body>
+</html>

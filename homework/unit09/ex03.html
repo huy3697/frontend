@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+/*		*{
+			padding: 0;
+			margin: 0;
+		}*/
+		#main{
+			position: relative;
+			width: 400px;
+			height: 200px;
+			background-image: url("wood.jpg");
+			padding-top: 10px;
+			padding-left: 10px;
+		}
+		#but1{
+			background-color: white;
+		}
+		button{
+			background-color: gray;
+			border: none;
+			padding: 5px;
+		}
+		#text1{
+			position: absolute;
+			width: 360px;
+			z-index: 1;
+		}
+		#text1{
+			position: absolute;
+			margin-top: 0;
+			width: 360px;
+			z-index: 1;
+		}
+		#text2{
+			position: absolute;
+			margin-top: 0;
+			width: 360px;
+			z-index: 2;
+			display: none;
+		}
+		#text3{
+			position: absolute;
+			margin-top: 0;
+			width: 360px;
+			z-index: 3;
+			display: none;
+		}
+		#text{
+			background-color: white;
+			width: 360px;
+			height: 100px;
+			padding-top: 10px;
+			padding-left: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<button onclick="click1()" id="but1">Tab 1</button>
+		<button onclick="click2()" id="but2">Tab 2</button>
+		<button onclick="click3()" id="but3">Tab 3</button>
+	<div id="text">
+		<p id="text1"><b>Section 1</b><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam inventore ea quia nihil velit! Debitis corporis sequi nulla labore, perferendis!</p>
+		<p id="text2"><b>Section 2</b><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam inventore ea quia nihil velit! Debitis corporis sequi nulla labore, perferendis!</p>
+		<p id="text3"><b>Section 3</b><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam inventore ea quia nihil velit! Debitis corporis sequi nulla labore, perferendis!</p>
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		function click1(){
+			document.getElementById("text1").style.zIndex="1";
+			document.getElementById("text2").style.zIndex="2";
+			document.getElementById("text3").style.zIndex="3";
+			document.getElementById("text1").style.display="block";
+			document.getElementById("text2").style.display="none";
+			document.getElementById("text3").style.display="none";
+			document.getElementById("but1").style.backgroundColor="white";
+			document.getElementById("but2").style.backgroundColor="gray";
+			document.getElementById("but3").style.backgroundColor="gray";
+		}
+		function click2(){
+			document.getElementById("text2").style.zIndex="1";
+			document.getElementById("text1").style.zIndex="2";
+			document.getElementById("text3").style.zIndex="3";
+			document.getElementById("text2").style.display="block";
+			document.getElementById("text1").style.display="none";
+			document.getElementById("text3").style.display="none";
+			document.getElementById("but2").style.backgroundColor="white";
+			document.getElementById("but1").style.backgroundColor="gray";
+			document.getElementById("but3").style.backgroundColor="gray";
+		}
+		function click3(){
+			document.getElementById("text3").style.zIndex="1";
+			document.getElementById("text1").style.zIndex="2";
+			document.getElementById("text2").style.zIndex="3";
+			document.getElementById("text3").style.display="block";
+			document.getElementById("text1").style.display="none";
+			document.getElementById("text2").style.display="none";
+			document.getElementById("but3").style.backgroundColor="white";
+			document.getElementById("but1").style.backgroundColor="gray";
+			document.getElementById("but2").style.backgroundColor="gray";
+		}
+	</script>
+</body>
+</html>

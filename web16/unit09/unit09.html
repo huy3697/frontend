@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#error{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<form action="" method="post" onsubmit="test3(this)">
+		<input type="text" name="name" id="name">
+		<input type="text" name="address" id="">
+		<textarea name="" id="" cols="30" rows="10"></textarea>
+		<input type="Reset" name="" id="" value="Reset">	
+		<button type="submit">Submit</button>
+	</form>
+
+
+	<select name="" id="city" onchange="test2(this)">
+		<option value="">--Chon--</option>
+		<option value="1">Ha Noi</option>
+		<option value="2">Ho Chi Minh</option>
+		<option value="3">Nam Dinh</option>
+	</select>
+
+	<select name="" id="district">
+	<option value="">--Chon--</option>		
+	</select>
+	<br>
+
+	<input type="text" onblur="test(this)" onfocus="test1(this)" onkeyup="test(this)" value="">
+	<p id="error"></p>
+	<img onmouseover="bigImage(this)" onmouseout="smallImage(this)" src="../images/Samsung1.jpg" alt="">
+	<script type="text/javascript">
+		function bigImage(a){
+			a.style.width="500px";
+			a.style.height="500px";
+			a.style.borderRadius="50%";
+		}
+		function smallImage(a){
+			a.style.width="200px";
+			a.style.height="200px";
+		}
+
+		// function test(a){
+		// 	a.value.toUpperCase();
+		// 	a.style.borderColor="red";
+		// }
+
+		function test1(a){
+			a.style.borderColor="green";
+		}
+
+		function test(a){
+			if(a.value.length<6){
+				document.getElementById("error").innerHTML="Do dai phai lon hon bang 6";
+				
+			}else{
+				document.getElementById("error").innerHTML="";
+			}
+		}
+
+		function test2(a){
+			var b = document.getElementById("district");
+			if (a.value==1) {
+				b.innerHTML='<option value="1">Dong da</option>kkk<option value="2"></option><option value="3">aaa</option>';
+			}else if(a.value==2){
+				b.innerHTML='<option value="1">131</option>kkk<option value="2"></option>agww<option value="3">23r2</option>';
+			}else if(a.value==3){
+				b.innerHTML='<option value="1">avs</option>kkk<option value="2"></option>agww<option value="3">23r2</option>';
+		}else{
+				b.innerHTML ='<option value="">--Chon--</option>';
+		}
+	}
+
+	function test3(){
+		var a = document.getElementById('name').value;
+		alert(a);
+	}
+
+	</script>
+</body>
+</html>

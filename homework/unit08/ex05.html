@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>Mời nhập số n nguyên dương</p>
+	<input type="" name="" id="so">
+	<button onclick="tinh()">Tính</button>
+	<div id="hien"></div>
+	<script type="text/javascript">
+		function tinh(){
+			var n = document.getElementById("so").value;
+			var S =0;
+			for(var i=1; i<=n; i++){
+             S=S+(1/i);
+     		}
+     		document.getElementById("hien").innerHTML=S;
+		}
+	</script>
+</body>
+</html>

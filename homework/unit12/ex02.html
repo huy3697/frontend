@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+	li{
+		width: 500px;
+		list-style: none;
+		background: grey;
+		color: white;
+	}
+	.tru{
+		display: none;
+	}
+	p{
+		display: none;
+	}
+</style>
+<body>
+	<div>
+		<ul>
+			<li>
+				<span class="cong">
+					<i class="fa fa-plus" aria-hidden="true"></i>
+				</span>
+				<span class="tru">
+					<i class="fa fa-minus" aria-hidden="true"></i>
+				</span>
+				<h3>This is an expanded panel</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, mollitia illum necessitatibus amet libero ea sit nisi saepe, similique deserunt, harum nostrum ipsa cum nam magnam adipisci voluptatibus aperiam. Nostrum.</p>
+			</li>
+			<li>
+				<span class="cong">
+					<i class="fa fa-plus" aria-hidden="true"></i>
+				</span>
+				<span class="tru">
+					<i class="fa fa-minus" aria-hidden="true"></i>
+				</span>
+				<h3>Second Panel</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, mollitia illum necessitatibus amet libero ea sit nisi saepe, similique deserunt, harum nostrum ipsa cum nam magnam adipisci voluptatibus aperiam. Nostrum.</p>
+			</li>
+			<li>
+				<span class="cong">
+					<i class="fa fa-plus" aria-hidden="true"></i>
+				</span>
+				<span class="tru">
+					<i class="fa fa-minus" aria-hidden="true"></i>
+				</span>
+				<h3>Third Panel</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, mollitia illum necessitatibus amet libero ea sit nisi saepe, similique deserunt, harum nostrum ipsa cum nam magnam adipisci voluptatibus aperiam. Nostrum.</p>
+			</li>
+			<li>
+				<span class="cong">
+					<i class="fa fa-plus" aria-hidden="true"></i>
+				</span>
+				<span class="tru">
+					<i class="fa fa-minus" aria-hidden="true"></i>
+				</span>
+				<h3>Fourth Panel</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, mollitia illum necessitatibus amet libero ea sit nisi saepe, similique deserunt, harum nostrum ipsa cum nam magnam adipisci voluptatibus aperiam. Nostrum.</p>
+			</li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.cong').click(function(){		
+			$(this).parent().find('p').css('display','block');
+			$(this).parent().find('.tru').css('display','block');		
+			$(this).parent().find('.cong').css('display','none');		
+		})
+	})
+	$(function(){
+		$('.tru').click(function(){		
+			$(this).parent().find('p').css('display','none');
+			$(this).parent().find('.tru').css('display','none');		
+			$(this).parent().find('.cong').css('display','block');		
+		})
+	})
+</script>
+</html>
+
+<!-- placeholder="" in input

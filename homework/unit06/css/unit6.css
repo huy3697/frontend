@@ -1,0 +1,159 @@
+*{
+			padding: 0;
+			margin: 0;
+			z-index: 1;
+		}
+		#row1{
+			position: relative;
+		}
+		#row1 div{
+			float: left;
+			line-height: 73px;
+			margin-left: 50px;
+			height: 73px;
+		}
+		#row1 p{
+			margin-top: 0;
+		}
+		#row1 nav{
+			height: 73px;
+			background-color: #256969;
+		}
+		.list1 {
+			position: absolute;
+			right: 10px;
+			display: none;
+		}
+		.list2 {
+			position: absolute;
+			right: 10px;
+			display: none;
+		}
+		#row2{
+			position: relative;
+		}
+		#row2 nav{
+			height: 50px;
+			background-color: #3ca8a8;
+		}
+		#row2 ul li{
+			line-height: 50px;
+			list-style: none;
+			margin-left: 20px;
+			float: left;
+		}
+		#row2 a{
+			text-decoration: none;
+			color: white;
+		}
+		#row2_cuoi a{
+			position: absolute;
+			right: 	70px;
+		}
+		#row3 nav{
+			position: relative;
+			background-color: #b4dfe5;
+			height: 50px;
+		}
+		#row3  p{
+			position: absolute;
+			right: 70px;
+			line-height: 50px;
+			color: #256969;
+		}
+		#row4 h2{
+			margin-left: 100px;
+		}
+		#row5{
+			position: relative;
+		}
+		#col1{
+			width: 60%;
+			float: left;
+			right: 90%;
+		}
+		#col2{
+			width: 30%;
+			float: left;
+		}
+		.col2_row1{
+			margin-bottom: 20px;
+			width: 249px;
+		}
+		.col2_row1:first-child{
+			background-color: #256969;
+		}
+		.col2_row{
+			border: 1px solid;
+			width: 249px;
+/*			margin-left: 50px;*/
+			margin-bottom: 20px;
+		}
+		#col1 div{
+			width: 50%;
+			float: left;
+		}
+		#col1 img{
+			margin-top: 20px;
+/*			margin-left: 50px;*/
+		}
+		#col1 p{
+			/*margin-left: 50px;*/
+		}
+		#col1 p{
+			width: 277px;
+		}
+		#col1{
+			border:1px solid;
+			background-color: #e7e3d4;
+		}
+		.anh_col1{
+			width: 277px;
+			height: 208px;
+		}
+		#row6{
+			margin-left: 100px;
+		}
+		.row6_row{
+			width: 20%;
+			float: left;
+			margin-left: 20px;		
+		}
+		.row6_row li{
+			list-style: none;
+		}
+		.row6_row a{
+			text-decoration: none;
+		}
+		.row6_row1{
+			border: 1px solid;
+		}
+		@media (max-width: 1288px){
+			.icon{
+				display: none;
+				z-index: 2;
+			}
+			.list1{
+				display: block;
+			}
+		}
+		@media(max-width: 1040px){
+			#col1 div{
+				width: 100%;
+			}
+			.anh_col1{
+				width: 100%;
+			}
+			#col1 p{
+				width: 100%;
+			}
+		}
+		@media(max-width: 940px){
+			.menu{
+				z-index: 2;
+				display: none;
+			}
+			.list2{
+				display: block;
+			}
+		}

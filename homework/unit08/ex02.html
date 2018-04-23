@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>Mời nhập số nguyên n</p>
+	<input type="" name="" id="so"><br>
+	<button onclick="tinh()">Tính</button>
+	<div id="ketqua"></div>
+	<script type="text/javascript">
+		function tinh(){
+		var a = document.getElementById("so").value;
+		var s =0;
+		var i =0;
+		do{
+			s+=i;
+			i++;
+		}while(i<=a);
+		document.getElementById("ketqua").innerHTML="Kết quả là : "+s;
+	}
+	</script>
+</body>
+</html>
